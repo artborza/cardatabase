@@ -16,8 +16,9 @@ import com.packt.cardatabase.domain.User;
 import com.packt.cardatabase.repository.CarRepository;
 import com.packt.cardatabase.repository.OwnerRepository;
 import com.packt.cardatabase.repository.UserRepository;
+import com.sun.glass.ui.Application;
 
-import javafx.application.Application;
+
 
 @SpringBootApplication
 public class CardatabaseApplication extends SpringBootServletInitializer {
