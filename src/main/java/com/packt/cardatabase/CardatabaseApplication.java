@@ -10,13 +10,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
-import com.apple.eawt.Application;
 import com.packt.cardatabase.domain.Car;
 import com.packt.cardatabase.domain.Owner;
 import com.packt.cardatabase.domain.User;
 import com.packt.cardatabase.repository.CarRepository;
 import com.packt.cardatabase.repository.OwnerRepository;
 import com.packt.cardatabase.repository.UserRepository;
+
+import javafx.application.Application;
 
 @SpringBootApplication
 public class CardatabaseApplication extends SpringBootServletInitializer {
