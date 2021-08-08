@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
@@ -16,10 +17,10 @@ import com.packt.cardatabase.domain.User;
 import com.packt.cardatabase.repository.CarRepository;
 import com.packt.cardatabase.repository.OwnerRepository;
 import com.packt.cardatabase.repository.UserRepository;
-import com.sun.glass.ui.Application;
 
 
 
+@EnableConfigurationProperties
 @SpringBootApplication
 public class CardatabaseApplication extends SpringBootServletInitializer {
 	private static final Logger logger = LoggerFactory.getLogger(CardatabaseApplication.class);
@@ -33,7 +34,7 @@ public class CardatabaseApplication extends SpringBootServletInitializer {
 	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(Application.class);
+		return application.sources(CardatabaseApplication.class);
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
