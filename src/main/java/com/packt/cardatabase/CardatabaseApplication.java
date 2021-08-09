@@ -34,14 +34,14 @@ public class CardatabaseApplication extends SpringBootServletInitializer {
 	@Autowired
 	private UserRepository urepository;
 	
-	public static void main(String[] args) {
-		SpringApplication.run(CardatabaseApplication.class, args);
-		logger.info("Hello Spring Boot");
-	}
-	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(CardatabaseApplication.class);
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(CardatabaseApplication.class, args);
+		logger.info("Hello Spring Boot");
 	}
 
 	@Bean
